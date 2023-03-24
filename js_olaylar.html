@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="yuklemeTamamlandi()">
+    <style>
+        .loader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url('https://miro.medium.com/v2/resize:fit:1400/1*CsJ05WEGfunYMLGfsT2sXA.gif') 50% 50% no-repeat rgb(249, 249, 249);
+        }
+    </style>
+    <div id="divMsg" class="loader">
+    </div>
+    <div id="resim" style="display: none;">
+        <img src="https://forum.donanimarsivi.com/attachments/936378-jpg.37134/">
+    </div>
+    <script>
+        function yuklemeTamamlandi() {
+            document.querySelector("#divMsg").remove();
+            document.querySelector("#resim").style.display = "block"
+        }
+    </script>
+</body>
+
+</html>

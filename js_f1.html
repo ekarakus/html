@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            <input type="number" id="txtDogru" placeholder="doğru sayısı">
+        </div>
+        <div>
+            <input type="number" id="txtYanlis" placeholder="yanlış sayısı">
+        </div>
+        <div id="divSonuc"></div>
+        <div>
+            <button type="button" onclick="islem()">Hesapla</button>
+        </div>
+    </form>
+    <script>
+        const islem = () => {
+            let dogru = Number(document.querySelector("#txtDogru").value);
+            let yanlis = Number(document.querySelector("#txtYanlis").value);
+            document.querySelector("#divSonuc").innerHTML = puanHesapla(dogru, yanlis);
+        }
+        const puanHesapla = (dogruSayisi, yanlisSayisi) => {
+            let net = dogruSayisi - (yanlisSayisi / 3);
+            let puan = net * 2;
+            return puan;
+        }
+    </script>
+</body>
+</html>

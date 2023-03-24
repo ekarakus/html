@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="ad"> Ad </label>
+        <input type="text" class="t" id="ad" name="txtad" value="Efe K.">
+        <br>
+        <label for="">Hobiler</label>
+        <br>
+        <input type="checkbox" name="hobi" value="atlama" class="c" id="atlama">
+        <label for="atlama">Atlama tehlikelidir</label>
+        <br>
+        <input type="checkbox" name="hobi" value="ziplama" class="c" id="ziplama">
+        <label for="ziplama">Zıplama güzeldir</label>
+        <br>
+        <input type="checkbox" name="hobi" value="dalma" class="c" id="dalma">
+        <label for="dalma">Dalma nefes ister</label>
+        <br>
+        <button type="button" onclick="kontrolEt()">Kontrol et</button>
+    </form>
+    <script>
+        function kontrolEt() {
+            //id değeri ad olan eleman
+            let ad = document.getElementById("ad");
+            // CLASS değeri c olan ilk eleman
+            let hobi1 = document.getElementsByClassName("c")[0];
+            // name değeri hobi olan ikinci elemanı alır
+            let hobi2 = document.getElementsByName("hobi")[1];
+            //id değeri dalma olan elemanı alır
+            let hobi3 = document.querySelector("#dalma");
+            //class değeri c olan elemanların hepsini alır
+            let hobiler = document.querySelectorAll(".c");
+            //ad olarak aldığı elemanın değerini "yeni değer" olarak değiştirdi
+            ad.value = "yeni değer";
+        }
+
+
+    </script>
+</body>
+
+</html>

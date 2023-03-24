@@ -1,0 +1,70 @@
+<form action="" id="form1" Novalidate>
+    <table>
+        <tr>
+            <td>
+                <label for="ad">Ad</label>            
+            </td>
+            <td>
+            <input autofocus required type="text" name="ad" id="ad"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Cinsiyet</td>
+            <td>
+                
+                <input type="radio" name="cinsiyet" id="erkek">
+                <label for="erkek">Erkek</label>
+                <input type="radio" name="cinsiyet" id="kadin">
+                <label for="kadin">Kadın</label>
+                <input type="radio" name="cinsiyet" id="belirtme">
+                <label for="belirtme">belirtmek istemiyorum</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="memleket">Memleket</label></td>
+            <td>
+               <select name="memleket" id="memleket">
+                <option value="58">Sivas</option>
+                <option value="01">Adana</option>
+                <option value="81">Düzce</option>
+               </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Hobiler</td>
+            <td>
+                <input type="checkbox" name="hobi" id="atlama">
+                <label for="atlama">Atlama</label>
+                <input type="checkbox" name="hobi" id="ziplama">
+                <label for="ziplama">Zıplama</label>
+                <input type="checkbox" name="hobi" id="dalma">
+                <label for="dalma">Dalma</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="gez">Gezdiğin yerler</label></td>
+            <td>
+                <select name="" id="gez" multiple size="5">
+                <option>Almanya</option>
+                <option>Portekiz</option>
+                <option>Fransa</option>
+                <option>İspanya</option>
+                <option>Kore</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <meter id="basari" 
+                form="form1" 
+                 min="0" low="40" high="90" max="100" value="95"></meter>
+            </td>
+        </tr>
+        <tr>
+            <td>İlerleme durumu</td>
+            <td>
+                <progress id="durum" value="32" max="100"> 32% </progress>
+            </td>
+        </tr>
+    </table>
+</form>

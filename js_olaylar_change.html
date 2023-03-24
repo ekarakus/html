@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function yaz(e) {
+            console.log(e);
+            if (e.keyCode === 13) {
+                let ad = document.querySelector("#ad").value;
+                let soyad = document.querySelector("#soyad").value;
+                document.querySelector("#tabela").innerHTML = ad + " " + soyad;
+            }
+        }
+    </script>
+    <div>
+        <input onkeypress="yaz(event)" type="text" id="ad" placeholder="adınız giriniz">
+        <input type="text" onkeypress="yaz(event)" id="soyad" placeholder="soyadınız giriniz">
+    </div>
+    <div id="tabela">
+
+    </div>
+</body>
+
+</html>

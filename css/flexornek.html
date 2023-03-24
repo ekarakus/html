@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            box-sizing: border-box;
+            
+        }
+        
+        .container
+        {
+            display:flex ;
+            font-size: 20pt;
+            background-color: bisque;
+            flex-direction:row;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            width: 80%;
+
+        }
+        .container>div
+        {
+            margin: 10px;
+            padding: 20px;
+            flex-basis: auto;
+            flex-grow: 1;
+            flex-shrink: 1;
+            height: 200px;
+            
+        }
+        .container>div:first-child{
+            background-color: beige;
+            flex-basis: calc(17% - 40px);
+
+        }
+        .container>div:nth-child(2){
+            flex-basis: 83%;  
+            background-color: violet;
+            display: flex;
+            justify-content: center;
+            align-items: center;      
+        }
+        .container>div:nth-child(3){            
+            background-color: lightseagreen;      
+        }
+        
+        .container>div:nth-child(4){            
+            background-color: coral;      
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>x</div>
+        <div>5x</div>
+        <div>3x</div>
+        <div>3x</div>
+    </div>
+    
+    
+</body>
+</html>

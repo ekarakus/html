@@ -1,0 +1,11 @@
+div {
+    background-color: black;
+    color: red;
+    border: 2px solid white;
+    font-size: 25pt;
+    margin-bottom: 20px;
+}
+body {
+    padding: 50px;
+    background-color:orange;
+}

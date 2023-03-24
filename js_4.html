@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</HEAD>
+
+<body>
+<input type= "text" id= "getText" name= "getText" onclick= "this.value = '' "/>
+<button onclick= "getAndSetText()">Yazdır</button>
+<input type= "text" id= "setText" name= "setText" onclick= "this.value = '' "/>
+
+<script>
+    
+    function getAndSetText(){
+    var setText= document.getElementById('getText').value;
+    document.getElementById('setText').value= setText;
+}
+    function getText(){
+    var getText = document.getElementById('getText').value;
+    alert(getText);
+}
+  </script>
+</body>
+
+</html>

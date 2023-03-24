@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background: #f1f1f1;
+      }
+      #loginForm {
+        background: #4fffff;
+        padding: 20px;
+        width: 50%;
+        margin: 40px auto;
+        min-width: 200px;
+      }
+      #loginForm input {
+        width: 70%;
+        float: left;
+      }
+      #loginForm label {
+        width: 30%;
+        float: left;
+      }
+      #loginForm  div {
+        margin-bottom: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="loginForm">
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" />
+      </div>
+      <div>
+        <label for="password">Şifre</label>
+        <input type="password" id="password" />
+      </div>
+      <div>
+        <button type="reset">Temizle</button>
+        <button type="submit">Giriş</button>
+      </div>
+    </form>
+  </body>
+</html>
