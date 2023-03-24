@@ -1,0 +1,10 @@
+<textarea id="metin" placeholder="Buraya bişeyler yazın"></textarea>
+<div id="bilgi">
+
+</div>
+<script>
+let metin = document.querySelector("#metin")
+metin.addEventListener("keyup",function(){
+    document.querySelector("#bilgi").innerHTML=metin.value.length
+});
+</script>
