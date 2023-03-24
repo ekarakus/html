@@ -1,0 +1,25 @@
+<div>
+    <textarea  id="metin" ></textarea>
+</div>
+<input type="text" id="eski" placeholder="ne aradınız"/>
+<input type="text" id="yeni" placeholder="ne ile değiştireceksiniz"/>
+<button type="button">
+    degistir
+</button>
+
+<script>
+    let buton = document.querySelector("button")
+    buton.addEventListener("click", function(){
+        let metin = document.querySelector("#metin");
+        let deger = metin.value;
+        let eski = document.querySelector("#eski").value;
+        let yeni = document.querySelector("#yeni").value;
+        let sonuc = deger.replace(eski,yeni)
+        metin.value= sonuc;
+
+
+
+
+    })
+
+</script>
