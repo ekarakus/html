@@ -1,0 +1,9 @@
+<textarea  id="icerik" ></textarea>
+<div id="sonuc"></div>
+<script>
+    let icerik = document.querySelector("#icerik");
+    icerik.addEventListener("keyup",function(){
+    let parcalar = this.value.split(" ");
+   document.querySelector("#sonuc").innerHTML=`${parcalar.length} adet kelime var` 
+    })
+</script>
