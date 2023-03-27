@@ -1,3 +1,11 @@
+<style>
+    .satir {
+        background-color: red;
+        margin-top: 10px;
+        padding: 10px;
+        color: white;
+    }
+</style>
 <div id="kolon"></div>
 <script>
     for (let sayac = 1; sayac <= 3; sayac++) {
@@ -6,7 +14,7 @@
             let sayi = Math.trunc(Math.random() * 100);
             sayilar += " " + sayi;
         }
-        document.querySelector("#kolon").innerHTML += `<div style="background-color: red"> ${sayac}.kolon ${sayilar} </div>`;
+        document.querySelector("#kolon").innerHTML += `<div class="satir"> ${sayac}.kolon ${sayilar} </div>`;
     }
 
 
