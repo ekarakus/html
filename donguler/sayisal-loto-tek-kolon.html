@@ -1,9 +1,13 @@
 <div id="kolon"></div>
 <script>
-    let sayilar = "";
-    for (let i = 0; i < 6; i += 1) {
-        let sayi = Math.trunc(Math.random() * 100);
-        sayilar += " " + sayi;
+    for (let sayac = 1; sayac <= 3; sayac++) {
+        let sayilar = "";
+        for (let i = 0; i < 6; i += 1) {
+            let sayi = Math.trunc(Math.random() * 100);
+            sayilar += " " + sayi;
+        }
+        document.querySelector("#kolon").innerHTML += `<div style="background-color: red"> ${sayac}.kolon ${sayilar} </div>`;
     }
-    document.querySelector("#kolon").innerHTML = sayilar;
+
+
 </script>
