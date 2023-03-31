@@ -1,9 +1,10 @@
 <script>
-    let deger = 0, toplam = 0;
+    let deger = 0, toplam = 0, sayac = 0;
     do {
         deger = Number(prompt("değer giriniz"));
         toplam += deger;
+        sayac++;
     }
     while (deger != 0)
-    alert("Girilen değerlerin toplamı :" + toplam);
+    alert(`${sayac} adet sayının toplamı ${toplam} dir`)
 </script>
