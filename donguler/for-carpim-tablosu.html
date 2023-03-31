@@ -1,6 +1,9 @@
+<div id="str"></div>
 <script>
-    let kolon=10;
-    for (i = 1; i <= 10; i++) {
-        console.log(`${kolon} x ${i} = ${i*kolon}`);
+    let s = document.querySelector("#str");
+    for (let kolon = 1; kolon <= 10; kolon++) {
+        for (i = 1; i <= 10; i++) {
+            s.innerHTML += `<div>${kolon} x ${i} = ${i * kolon}</div>`;
+        }
     }
 </script>
