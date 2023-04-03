@@ -1,0 +1,12 @@
+<input type="text" id="vize" placeholder="vize notu" />
+<input type="text" id="final" placeholder="final notu">
+<button id="hesapla">Hesapla</button>
+<script>
+    document.querySelector("#hesapla").
+        addEventListener("click", function () {
+            const vize = Number(document.querySelector("#vize").value);
+            const final = Number(document.querySelector("#final").value);
+            const puan = vize * 0.4 + final * 0.6;
+            alert(puan);
+        })
+</script>
