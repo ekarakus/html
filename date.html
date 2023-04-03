@@ -1,0 +1,12 @@
+<script>
+    const options = {
+        weekday: 'long',
+        year: 'numeric', 
+        month: 'long',
+        day: 'numeric',
+        hour:"numeric",
+        minute:"numeric"
+    };
+    const tarih = new Date("2006", "3", "02", "15", "30");
+    console.log(tarih.toLocaleDateString("tr-TR", options));
+</script>

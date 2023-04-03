@@ -1,12 +1,13 @@
-<input type="text" id="vize" placeholder="vize notu" />
-<input type="text" id="final" placeholder="final notu">
+<input type="number" min="0" max="100" step="1" id="vize" placeholder="vize notu" />
+<input type="number" min="0" max="100" step="1" id="final" placeholder="final notu">
 <button id="hesapla">Hesapla</button>
+<div id="ortalama"></div>
 <script>
     document.querySelector("#hesapla").
         addEventListener("click", function () {
             const vize = Number(document.querySelector("#vize").value);
             const final = Number(document.querySelector("#final").value);
-            const puan = vize * 0.4 + final * 0.6;
-            alert(puan);
+            const puan = (vize * 0.4) + (final * 0.6);
+            document.querySelector("#ortalama").innerHTML =  puan;
         })
 </script>
