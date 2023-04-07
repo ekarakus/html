@@ -1,0 +1,21 @@
+<button onclick="ekle()">Ekle</button>
+<ol id="liste">
+
+</ol>
+<script>
+    let yapilacaklar = ["Dünyayı gez", "Bungee jumping", "Scube diving", "Aya ziyaret"];
+
+    let listele = () => {
+        let hedef = document.querySelector("#liste");
+        hedef.innerHTML = "";
+        for (const yapilacak of yapilacaklar) {
+            hedef.innerHTML += `<li>${yapilacak}</li>`
+        }
+    }
+    const ekle = () => {
+        let eleman = prompt("Ne yapacaksın");
+        yapilacaklar.push(eleman);
+        listele();
+    }
+    listele();
+</script>
