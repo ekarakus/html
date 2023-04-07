@@ -1,0 +1,16 @@
+<button id="up">+</button>
+<span>0</span>
+<button id="down">-</button>
+<script>
+    document.querySelector("#up").addEventListener("click", function () {
+        let sayac = Number(document.querySelector("span").innerHTML);
+        document.querySelector("span").innerHTML = ++sayac;
+    })
+    document.querySelector("#down").addEventListener("click", function () {
+        let sayac = Number(document.querySelector("span").innerHTML);
+        if (sayac <= 0) {
+            return ;
+        }
+        document.querySelector("span").innerHTML = --sayac;
+    })
+</script>

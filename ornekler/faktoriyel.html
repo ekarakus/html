@@ -1,3 +1,5 @@
+<button id="tikla">tıkla</button>
+
 <script>
     function faktoriyel(sayi) {
         let sonuc = 1;
@@ -6,6 +8,10 @@
         }
         return sonuc;
     }
-    let s = prompt("sayı gir");
-    alert(faktoriyel(s));
+
+    document.getElementById("tikla").addEventListener("click", function () {
+        let s = prompt("sayı gir");
+        alert(faktoriyel(s));
+    })
+    
 </script>
