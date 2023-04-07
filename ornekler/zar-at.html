@@ -4,35 +4,93 @@
     document.querySelector("button").addEventListener("click",
         function () {
             const zar = Math.ceil(Math.random() * 6);
-        console.log(zar);
+            console.log(zar);
             document.querySelector("div")
-                .innerHTML=`<img src="../images/zarlar/${zar}.png"/>`;
+                .innerHTML = `<img src="../images/zarlar/${zar}.png"/>`;
 
         })
 </script>
 <style>
-    body{
-        text-align:center;
+    body {
+        text-align: center;
     }
-    button:hover{
-        color:rgb(223, 220, 220);
+
+    button:hover {
+        color: rgb(223, 220, 220);
         border: 1px solid rgb(255, 81, 0);
-        cursor:pointer;
+        cursor: pointer;
         opacity: 0.5;
-        
+
     }
-    img{
-        transition: 0.5s; 
+
+    img {
+        width: 200px;
+        animation: fadeIn 3s;
+        -webkit-animation: fadeIn 3s;
+        -moz-animation: fadeIn 3s;
+        -o-animation: fadeIn 3s;
+        -ms-animation: fadeIn 3s;
     }
-    button{
-        transition: 0.5s;
-        font-size:40pt;
-        padding:20px;
-        margin:20px;
-        border:none;
-        color:white;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-moz-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-o-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-ms-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    button {
+        transition: 0.2s;
+        font-size: 40pt;
+        padding: 20px;
+        margin: 20px;
+        border: none;
+        color: white;
         font-size: "Open sans";
-        background-color:dodgerblue;
+        background-color: dodgerblue;
         border-radius: 10px;
     }
 </style>
