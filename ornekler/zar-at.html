@@ -1,0 +1,38 @@
+<button>Zar At</button>
+<div></div>
+<script>
+    document.querySelector("button").addEventListener("click",
+        function () {
+            const zar = Math.ceil(Math.random() * 6);
+        console.log(zar);
+            document.querySelector("div")
+                .innerHTML=`<img src="../images/zarlar/${zar}.png"/>`;
+
+        })
+</script>
+<style>
+    body{
+        text-align:center;
+    }
+    button:hover{
+        color:rgb(223, 220, 220);
+        border: 1px solid rgb(255, 81, 0);
+        cursor:pointer;
+        opacity: 0.5;
+        
+    }
+    img{
+        transition: 0.5s; 
+    }
+    button{
+        transition: 0.5s;
+        font-size:40pt;
+        padding:20px;
+        margin:20px;
+        border:none;
+        color:white;
+        font-size: "Open sans";
+        background-color:dodgerblue;
+        border-radius: 10px;
+    }
+</style>

@@ -1,0 +1,7 @@
+<div></div>
+<script>
+    setInterval(function () {
+        let tarih = new Date();
+        document.querySelector("div").innerHTML = tarih.getHours() + ":" + tarih.getMinutes().toString().padStart(2, "0") + ":" + tarih.getSeconds().toString().padStart(2, "0")
+    }, 1000)
+</script>
