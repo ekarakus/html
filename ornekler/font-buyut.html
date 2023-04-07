@@ -1,0 +1,26 @@
+<div id="box">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa perferendis perspiciatis consequuntur earum, ipsum
+    doloribus a neque magnam ullam repudiandae ipsam dolore at pariatur id aperiam ab natus voluptas numquam.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis iusto alias voluptate voluptatem illo facere
+    eligendi, corrupti itaque, et rem at dignissimos? Incidunt fugiat explicabo adipisci et facere amet voluptatibus?
+</div>
+<div>
+    <button id="up" onclick="buyut()">+</button>
+    <button id="down" onclick="kucult()">-</button>
+</div>
+<script>
+    
+    let fontBuyuklugu = 36;
+    
+    let ayarla=(deger)=>{
+        document.querySelector("#box").style.fontSize = `${deger}px`;
+    }
+    let buyut = () => {
+        ayarla(++fontBuyuklugu);
+    }
+    let kucult = () => {
+        ayarla(--fontBuyuklugu);
+    }
+
+    ayarla(fontBuyuklugu);
+</script>
