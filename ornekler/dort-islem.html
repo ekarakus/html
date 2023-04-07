@@ -1,0 +1,53 @@
+<form action="">
+    <div>
+        <label for="sayi1">Birinci sayıyı gir</label>
+        <input type="number" name="sayi1" id="sayi1" />
+    </div>
+    <div>
+        <label for="sayi2">ikinci sayıyı gir</label>
+        <input type="number" name="sayi2" id="sayi2" />
+    </div>
+    <div>
+        <label for="islemTipi">İşlem tipi</label>
+        <select name="islemTipi" id="islemTipi">
+            <option value="+">Topla</option>
+            <option value="-">Çıkar</option>
+            <option value="*">Çarp</option>
+            <option value="/">Böl</option>
+        </select>
+    </div>
+    <div>
+        <button type="submit"> İşlem yap</button>
+    </div>
+    <div id="sonuc"></div>
+</form>
+<script>
+    document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault()
+        const a = Number(document.querySelector("#sayi1").value);
+        const b = Number(document.querySelector("#sayi2").value);
+        const islem = document.querySelector("#islemTipi").value;
+        let sonuc;
+
+        switch (islem) {
+            case "+": {
+                sonuc = a + b; break;
+            }
+            case "-": {
+                sonuc = a - b; break;
+            }
+            case "*": {
+                sonuc = a * b; break;
+            }
+            case "/": {
+                sonuc = a / b; break;
+            }
+        }
+ document.getElementById("sonuc").innerHTML=sonuc
+
+    })
+
+
+
+
+</script>
