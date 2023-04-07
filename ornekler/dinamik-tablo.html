@@ -1,0 +1,52 @@
+<form action="">
+    <input type="number" min="1" name="satir" required placeholder="satır sayısı" />
+    <input type="number" min="1" name="sutun" required placeholder="sutun sayısı" />
+    <button type="submit">Tablo çiz</button>
+
+</form>
+<div id="divTablo"></div>
+<style>
+    td {
+        border: 1px solid green;
+        border-radius: 5px;
+    }
+
+    table {
+        width: 90%;
+        background-color: aliceblue;
+    }
+</style>
+<script>
+    document.querySelector("input[type='number']").addEventListener("keyup", function (e) {
+        if (Number(e.currentTarget.value) < 0) {
+            document.querySelector("#divTablo").innerHTML = "pozitif değer gir";
+            document.querySelector("#divTablo").style.color = "red";
+        } else {
+            document.querySelector("#divTablo").innerHTML = null;
+        }
+    })
+    document.querySelector("form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        const satir = Number(document.querySelector("input[name='satir']").value);
+        const sutun = Number(document.querySelector("input[name='sutun']").value);
+        if (satir > 100 || sutun > 100) {
+            document.querySelector("#divTablo").innerHTML = "100 den küçük değer gir";
+            document.querySelector("#divTablo").style.color = "red";
+            return false;
+        }
+        let kodlar = "<table>";
+        let sayac = 1;
+        for (let i = 1; i <= satir; i++) {
+            kodlar += "<tr>";
+            //sütunlar
+            for (let k = 1; k <= sutun; k++) {
+                kodlar += `<td> ${sayac++}</td>`
+            }
+            kodlar += "</tr>";
+
+        }
+        kodlar += "</table>"
+        document.querySelector("#divTablo").innerHTML = kodlar
+
+    })
+</script>
