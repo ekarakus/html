@@ -1,0 +1,18 @@
+<input type="text" id="ayismi">
+<ol></ol>
+<button>Ekle</button>
+<script>
+    let aylar = ["Aralık", "Ocak", "Şubat"];
+    document.querySelector("button").addEventListener("click", function () {
+        aylar.push(document.querySelector("#ayismi").value);
+        listele();
+    })
+
+    const listele = () => {
+        document.querySelector("ol").innerHTML = "";
+        for (const ay of aylar) {
+            document.querySelector("ol").innerHTML += `<li>${ay}</li>`
+        }
+    }
+    listele();
+</script>

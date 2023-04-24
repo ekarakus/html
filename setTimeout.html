@@ -1,0 +1,11 @@
+<div></div>
+<script>
+    let sayac = 5;
+    let zamanla = setInterval(() => {
+        document.querySelector("div").innerHTML = `${sayac--}. saniye sonra patlayacak.`;
+    }, 1000);
+    setTimeout(function () {
+        document.querySelector("div").remove();
+        clearInterval(zamanla);
+    }, 6000);
+</script>

@@ -1,0 +1,17 @@
+<input type="text" id="s1" placeholder="1. sayı" />
+<input type="text" id="s2" placeholder="2. sayı" />
+<button>Topla</button>
+<input type="text" id="sonuc" disabled />
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $("button").click(function () {
+        const s1 = Number($("#s1").val());
+        const s2 = Number($("#s2").val());
+        $("#sonuc").val(s1 + s2);
+    });
+    // document.querySelector("button").addEventListener("click", function () {
+    //     const s1 = Number(document.querySelector("#s1").value);
+    //     const s2 = Number(document.querySelector("#s2").value);
+    //     document.querySelector("#sonuc").value=s1+s2;
+    // })
+</script>
